@@ -1,0 +1,5 @@
+adb shell getevent
+adb shell getevent /dev/input/event1 > tmp.in
+./sendevent tmp.in tmp.out
+adb shell push tmp.out /mnt/sdcard/
+adb shell "cd /mnt/sdcard/ && cat tmp.out > /dev/input/event1"
