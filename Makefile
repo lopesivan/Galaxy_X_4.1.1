@@ -29,7 +29,7 @@ foto:
 	adb shell "input keyevent KEYCODE_CAMERA"
 	adb shell am force-stop com.google.android.gallery3d
 	adb pull /storage/sdcard0/DCIM/Camera/$$(adb shell ls  /storage/sdcard0/DCIM/Camera/| grep 2024| tr -d '\15') .
-	adb rm /storage/sdcard0/DCIM/Camera/$$(adb shell ls  /storage/sdcard0/DCIM/Camera/| grep 2024| tr -d '\15')
+	adb shell rm /storage/sdcard0/DCIM/Camera/$$(adb shell ls  /storage/sdcard0/DCIM/Camera/| grep 2024| tr -d '\15')
 
 #pego as informações sobre o aplicativo da camera:
 # adb -d shell "am start -a android.media.action.IMAGE_CAPTURE" -W
