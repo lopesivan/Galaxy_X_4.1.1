@@ -8,11 +8,14 @@ tmp.out:
 	./senevent tmp.in tmp.out
 
 back:
-	adb shell input keyevent 4
+	# adb shell input keyevent 4
+	adb shell input keyevent KEYCODE_BACK
 home:
-	adb shell input keyevent 3
+	# adb shell input keyevent 3
+	adb shell input keyevent KEYCODE_HOME
 onoff-screen:
-	adb shell input keyevent 26
+	# adb shell input keyevent 26
+	adb shell input keyevent KEYCODE_POWER
 swipe:
 	adb push tmp.out /mnt/sdcard/
 	adb shell "cd /mnt/sdcard/ && cat tmp.out > /dev/input/event1"
