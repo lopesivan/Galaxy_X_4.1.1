@@ -7,6 +7,10 @@ clean:
 tmp.out:
 	./senevent tmp.in tmp.out
 
+back:
+	adb shell input keyevent 4
+home:
+	adb shell input keyevent 3
 onoff-screen:
 	adb shell input keyevent 26
 swipe:
