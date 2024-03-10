@@ -30,7 +30,7 @@ senha:
 	adb shell input text a2244
 	adb shell input keyevent 66
 
-programas:
+programs:
 	adb push swip.out /mnt/sdcard/
 	adb shell "cd /mnt/sdcard/ && cat swip.out > /dev/input/event1"
 	adb shell "rm /mnt/sdcard/swip.out"
