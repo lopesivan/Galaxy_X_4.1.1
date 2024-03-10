@@ -30,6 +30,11 @@ senha:
 	adb shell input text a2244
 	adb shell input keyevent 66
 
+programas:
+	adb push swip.out /mnt/sdcard/
+	adb shell "cd /mnt/sdcard/ && cat swip.out > /dev/input/event1"
+	adb shell "rm /mnt/sdcard/swip.out"
+
 foto:
 	adb shell "am start com.google.android.gallery3d/com.android.camera.Camera"
 	adb shell "input keyevent KEYCODE_FOCUS"
